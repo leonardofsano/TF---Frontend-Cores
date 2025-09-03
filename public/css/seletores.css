@@ -1,7 +1,21 @@
 .content ul.demo {
     list-style: none;
-    margin: 0;
+    margin/* EX 7 */
+li.item.ativo {
+ /* EX 12 */
+li[title$="com"] {
+    background-color: pink !important;
+    background: pink !important;
 }
+
+/* Corrige conflito: último li com title$="com" não recebe borda azul */
+li[title$="com"] {
+    border: none !important;
+}und-color: rgb(98, 98, 98) !important;
+    background: rgb(98, 98, 98)  !important;
+}
+
+/* EX 8 */}
 
 .content ul.demo>li {
     border-left: 2px solid transparent;
@@ -24,3 +38,72 @@
 }
 
 /** Continue aqui **/
+/* EX 2 */
+#unico {
+    color: red;
+}
+
+/* EX 3 */
+[data-type="attr"] {
+    text-decoration: underline;
+}
+
+/* EX 4 */
+[data-role~="user"] {
+    font-style: italic;
+}
+
+/* EX 5 */
+/* Seleciona o li que contém o texto :first-child */
+.content ul.demo > li:nth-child(5) {
+    font-size: 1.3em;
+}
+
+/* EX 6 */
+/* Seleciona o li que contém o texto :last-child */
+.content ul.demo > li:nth-child(6) {
+    border: 2px solid blue;
+}
+
+/* EX 7 */
+.content .item.ativo {
+    background-color: rgb(98, 98, 98);
+}
+
+/* EX 8 */
+.item span {
+    font-weight: bold;
+}
+
+/* EX 9 */
+.especial.destaque {
+    text-transform: uppercase;
+}
+
+/* EX 10 */
+[lang="pt-br"] {
+    color: green;
+}
+
+/* EX 11 */
+.content ul.demo > li[title^="começa"] {
+    font-style: italic;
+}
+
+/* EX 12 */
+.content ul.demo > li[title="termina-com"] {
+    background-color: pink !important;
+    background: pink !important;
+    border: none !important;
+}
+
+/* Responsividade: aside abaixo do conteúdo em telas pequenas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        margin-top: 16px;
+    }
+}

@@ -7,5 +7,9 @@ liElementCollection.forEach((liElement) => {
 
 
         /** CODAR AQUI */
+        // Remove .selected de todos os itens
+        liElementCollection.forEach(li => li.classList.remove("selected"));
+        // Adiciona .selected ao item clicado
+        liElement.classList.add("selected");
     });
 });
